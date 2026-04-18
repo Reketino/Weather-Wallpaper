@@ -2,6 +2,6 @@
 
 public class WeatherData
 {
-  public string Condition {get; set;} = "";
+  public string Condition { get; set; } = "";
   public double Temperature { get; set; }
 }
