@@ -1,6 +1,6 @@
 ﻿namespace WeatherWallpaper.Domain;
 
-public class Class1
+public class WeatherData
 {
 
 }
