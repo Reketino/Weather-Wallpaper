@@ -1,6 +1,8 @@
-﻿namespace WeatherWallpaper.Core;
+﻿using WeatherWallpaper.Domain;
 
-public class Class1
+namespace WeatherWallpaper.Core;
+
+public interface IWeatherService
 {
-
+    Task<WeatherData> GetWeatherAsync();
 }
