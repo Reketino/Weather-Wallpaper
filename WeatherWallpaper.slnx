@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="WeatherWallpaper.App/WeatherWallpaper.App.csproj" />
+  <Project Path="WeatherWallpaper.Core/WeatherWallpaper.Core.csproj" />
+  <Project Path="WeatherWallpaper.Domain/WeatherWallpaper.Domain.csproj" />
+  <Project Path="WeatherWallpaper.Infrastructure/WeatherWallpaper.Infrastructure.csproj" />
+</Solution>
