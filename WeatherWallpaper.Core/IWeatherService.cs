@@ -1,6 +1,6 @@
 ﻿namespace WeatherWallpaper.Core;
 
-public class Class1
+public interface IWeatherService
 {
 
 }
