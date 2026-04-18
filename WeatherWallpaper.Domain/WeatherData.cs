@@ -2,5 +2,6 @@
 
 public class WeatherData
 {
-
+  public string Condition {get; set;} = "";
+  
 }
