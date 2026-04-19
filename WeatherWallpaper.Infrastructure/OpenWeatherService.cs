@@ -4,7 +4,7 @@ using WeatherWallpaper.Domain;
 
 namespace WeatherWallpaper.Infrastructure;
 
-public class Class1
+public class OpenWeatherService
 {
 
 }
