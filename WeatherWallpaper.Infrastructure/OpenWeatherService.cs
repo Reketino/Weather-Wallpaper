@@ -29,6 +29,8 @@ public class OpenWeatherService : IWeatherService
         var temp = instant
             .GetProperty("air_temperature")
             .GetDouble();
+
+        var symbol = timeseries
     }
 
 }
