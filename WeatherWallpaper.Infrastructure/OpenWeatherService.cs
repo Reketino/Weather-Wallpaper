@@ -33,6 +33,7 @@ public class OpenWeatherService : IWeatherService
         var symbol = timeseries
             .GetProperty("data")
             .GetProperty("next_1_hours")
+            .GetProperty("summary")
     }
 
 }
