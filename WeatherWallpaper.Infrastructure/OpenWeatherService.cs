@@ -34,6 +34,7 @@ public class OpenWeatherService : IWeatherService
             .GetProperty("data")
             .GetProperty("next_1_hours")
             .GetProperty("summary")
+            .GetString();
     }
 
 }
