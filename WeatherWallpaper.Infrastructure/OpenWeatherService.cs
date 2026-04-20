@@ -6,5 +6,6 @@ namespace WeatherWallpaper.Infrastructure;
 
 public class OpenWeatherService : IWeatherService
 {
+    private readonly HttpClient _http = new();
 
 }
