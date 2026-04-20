@@ -25,6 +25,9 @@ public class OpenWeatherService : IWeatherService
             .GetProperty("data")
             .GetProperty("instant")
             .GetProperty("details");
+
+        var temp = instant
+            .GetProperty("air_temperature")
     }
 
 }
