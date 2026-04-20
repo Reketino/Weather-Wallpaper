@@ -23,6 +23,7 @@ public class OpenWeatherService : IWeatherService
 
         var instant = timeseries
             .GetProperty("data")
+            .GetProperty("instant")
     }
 
 }
