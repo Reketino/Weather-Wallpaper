@@ -16,6 +16,10 @@ public class OpenWeatherService : IWeatherService
         request.Headers.Add("User-Agent", "weather-wallpaper-app"); 
 
         var data = JsonDocument.Parse(json); 
+
+        var timeseries = data.RootElement
+            .GetProperty("properties")
+            .GetProperty("timeseries")[0];
     }
 
 }
