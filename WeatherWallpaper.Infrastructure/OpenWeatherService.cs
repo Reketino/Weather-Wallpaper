@@ -31,6 +31,8 @@ public class OpenWeatherService : IWeatherService
             .GetDouble();
 
         var symbol = timeseries
+            .GetProperty("data")
+            .
     }
 
 }
