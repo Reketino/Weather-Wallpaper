@@ -28,6 +28,19 @@ public class OpenWeatherService : IWeatherService
 
         var temp = instant
             .GetProperty("air_temperature")
+            .GetDouble();
+
+        var symbol = timeseries
+            .GetProperty("data")
+            .GetProperty("next_1_hours")
+            .GetProperty("summary")
+            .GetString();
+
+        return new WeatherData
+        {
+            Temperature = temp,
+            Condition = MapSymbolToCondiotion(symbol!)
+        };
     }
 
 }
