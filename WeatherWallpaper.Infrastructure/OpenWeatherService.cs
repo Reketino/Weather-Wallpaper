@@ -38,8 +38,8 @@ public class OpenWeatherService : IWeatherService
 
         return new WeatherData
         {
-            
-        }
+            Temperature = temp,
+        };
     }
 
 }
