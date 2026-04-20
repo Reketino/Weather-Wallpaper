@@ -14,6 +14,8 @@ public class OpenWeatherService : IWeatherService
 
         var request = new HttpRequestMessage(HttpMethod.Get, url);
         request.Headers.Add("User-Agent", "weather-wallpaper-app"); 
+
+        var data = JsonDocument.Parse(json); 
     }
 
 }
