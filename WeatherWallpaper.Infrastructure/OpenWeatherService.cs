@@ -20,6 +20,14 @@ public class OpenWeatherService : IWeatherService
         var timeseries = data.RootElement
             .GetProperty("properties")
             .GetProperty("timeseries")[0];
+
+        var instant = timeseries
+            .GetProperty("data")
+            .GetProperty("instant")
+            .GetProperty("details");
+
+        var temp = instant
+            .GetProperty("air_temperature")
     }
 
 }
