@@ -9,5 +9,8 @@ public class OpenWeatherService : IWeatherService
     private readonly HttpClient _http = new();
     
     public async Task<WeatherData> GetWeatherAsync()
+    {
+        var url = "https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=62.38&lon=6.44";
+    }
 
 }
