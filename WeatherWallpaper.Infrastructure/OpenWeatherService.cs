@@ -48,6 +48,8 @@ public class OpenWeatherService : IWeatherService
         if (symbol.Contains("rain"))
             return "Rain";
         
+         if (symbol.Contains("snow"))
+            return "Snow";
     }
 
 }
