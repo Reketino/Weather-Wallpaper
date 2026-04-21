@@ -39,8 +39,17 @@ public class OpenWeatherService : IWeatherService
         return new WeatherData
         {
             Temperature = temp,
-            Condition = MapSymbolToCondiotion(symbol!)
+            Condition = MapSymbolToCondition(symbol!)
         };
+    }
+
+    private string MapSymbolToCondition(string symbol)
+    {
+        if (symbol.Contains("rain"))
+            return "Rain";
+        
+         if (symbol.Contains("snow"))
+            return "Snow";
     }
 
 }
