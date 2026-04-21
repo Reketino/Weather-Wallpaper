@@ -53,6 +53,8 @@ public class OpenWeatherService : IWeatherService
 
         if (symbol.Contains("cloud"))
             return "Cloud";
+
+        return "Clear";
     }
 
 }
