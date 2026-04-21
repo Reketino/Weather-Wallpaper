@@ -45,6 +45,8 @@ public class OpenWeatherService : IWeatherService
 
     private string MapSymbolToCondition(string symbol)
     {
+        if (symbol.Contains("rain"))
+            return "Rain";
         
     }
 
