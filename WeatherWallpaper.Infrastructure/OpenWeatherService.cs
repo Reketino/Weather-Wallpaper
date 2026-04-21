@@ -50,6 +50,11 @@ public class OpenWeatherService : IWeatherService
         
          if (symbol.Contains("snow"))
             return "Snow";
+
+        if (symbol.Contains("cloud"))
+            return "Cloud";
+
+        return "Clear";
     }
 
 }
