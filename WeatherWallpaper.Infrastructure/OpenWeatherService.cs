@@ -16,6 +16,7 @@ public class OpenWeatherService : IWeatherService
         request.Headers.Add("User-Agent", "weather-wallpaper-app"); 
 
         var response = _http.SendAsync(request);
+        var json = await response.Content.ReadasStringAsync();
 
         var data = JsonDocument.Parse(json); 
 
