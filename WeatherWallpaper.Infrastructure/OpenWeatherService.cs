@@ -15,6 +15,9 @@ public class OpenWeatherService : IWeatherService
         var request = new HttpRequestMessage(HttpMethod.Get, url);
         request.Headers.Add("User-Agent", "weather-wallpaper-app"); 
 
+        var response = await _http.SendAsync(request);
+        var json = await response.Content.ReadAsStringAsync();
+
         var data = JsonDocument.Parse(json); 
 
         var timeseries = data.RootElement
@@ -34,6 +37,7 @@ public class OpenWeatherService : IWeatherService
             .GetProperty("data")
             .GetProperty("next_1_hours")
             .GetProperty("summary")
+            .GetProperty("symbol_code")
             .GetString();
 
         return new WeatherData
