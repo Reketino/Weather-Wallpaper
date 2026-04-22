@@ -37,6 +37,7 @@ public class OpenWeatherService : IWeatherService
             .GetProperty("data")
             .GetProperty("next_1_hours")
             .GetProperty("summary")
+            .GetProperty("symbol_code")
             .GetString();
 
         return new WeatherData
