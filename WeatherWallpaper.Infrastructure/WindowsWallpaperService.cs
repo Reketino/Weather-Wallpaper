@@ -3,7 +3,7 @@ using WeatherWallpaper.Core;
 
 namespace WeatherWallpaper.Infrastructure;
 
-public class WindowsWallpaperService : IWallpaperService
+public partial class WindowsWallpaperService : IWallpaperService
 {
     private const int SPI_SETDESKWALLPAPER = 20;
     private const int SPIF_UPDATEINIFILE = 0X01;
