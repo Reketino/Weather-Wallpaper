@@ -16,4 +16,9 @@ public class WindowsWallpaperService : IWallpaperService
         string lpvParam,
         int fuWinINI);
 
+    public void SetWallpaper(string relativePath)
+    {
+        var fullPath = Path.GetFullPath(Path.Combine("Assets", relativePath));
+    }
+
 }
