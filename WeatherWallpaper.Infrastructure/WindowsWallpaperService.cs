@@ -19,6 +19,11 @@ public class WindowsWallpaperService : IWallpaperService
     public void SetWallpaper(string relativePath)
     {
         var fullPath = Path.GetFullPath(Path.Combine("Assets", relativePath));
+
+        if (!File.Exists(fullPath))
+        {
+            Console.WriteLine($"[Wallpaper] File not found: {fullPath}");
+        }
     }
 
 }
