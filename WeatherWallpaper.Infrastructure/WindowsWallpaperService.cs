@@ -24,6 +24,23 @@ public class WindowsWallpaperService : IWallpaperService
         {
             Console.WriteLine($"[Wallpaper] File not found: {fullPath}");
         }
+
+        var result = SystemParametersInfo(
+            SPI_SETDESKWALLPAPER,
+            0,
+            fullPath,
+            SPIF_UPDATEINFILE | SPIF_SENDCHANGE
+        );
+
+        if (!result)
+        {
+            var error = Marshal.GetLastWin32Error();
+            Console.WriteLine($"[Wallpaper] Failed to set wallpaper. Error: {error}");
+        }
+        else
+        {
+            Console.WriteLine($"[Wallpaper] Updated: {relativePath}");
+        }
     }
 
 }
