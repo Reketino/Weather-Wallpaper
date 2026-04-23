@@ -31,6 +31,12 @@ public class WindowsWallpaperService : IWallpaperService
             fullPath,
             SPIF_UPDATEINFILE | SPIF_SENDCHANGE
         );
+
+        if (!result)
+        {
+            var error = Marshal.GetLastWin32Error();
+            Console.WriteLine($"[Wallpaper] Failed to set wallpaper. Error: {error}");
+        }
     }
 
 }
