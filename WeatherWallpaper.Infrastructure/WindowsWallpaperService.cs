@@ -6,7 +6,7 @@ namespace WeatherWallpaper.Infrastructure;
 public class WindowsWallpaperService : IWallpaperService
 {
     private const int SPI_SETDESKWALLPAPER = 20;
-    private const int SPIF_UPDATEINFILE = 0X01;
+    private const int SPIF_UPDATEINIFILE = 0X01;
     private const int SPIF_SENDCHANGE = 0X02;
 
     [DllImport("user32.dll", SetLastError = true)]
@@ -29,7 +29,7 @@ public class WindowsWallpaperService : IWallpaperService
             SPI_SETDESKWALLPAPER,
             0,
             fullPath,
-            SPIF_UPDATEINFILE | SPIF_SENDCHANGE
+            SPIF_UPDATEINIFILE | SPIF_SENDCHANGE
         );
 
         if (!result)
