@@ -10,5 +10,10 @@ public class WindowsWallpaperService : IWallpaperService
     private const int SPIF_SENDCHANGE = 0X02;
 
     [DllImport("user32.dll", SetLastError = true)]
+    private static extern bool SystemParametersInfo(
+        int uAction,
+        int uParam,
+        string lpvParam,
+        int fuWinINI);
 
 }
