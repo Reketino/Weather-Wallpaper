@@ -37,6 +37,10 @@ public class WindowsWallpaperService : IWallpaperService
             var error = Marshal.GetLastWin32Error();
             Console.WriteLine($"[Wallpaper] Failed to set wallpaper. Error: {error}");
         }
+        else
+        {
+            Console.WriteLine($"[Wallpaper] Updated: {relativePath}");
+        }
     }
 
 }
