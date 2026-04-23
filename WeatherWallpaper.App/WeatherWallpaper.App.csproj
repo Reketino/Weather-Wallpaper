@@ -1,5 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <ItemGroup>
+    <ProjectReference Include="..\WeatherWallpaper.Core\WeatherWallpaper.Core.csproj" />
+    <ProjectReference Include="..\WeatherWallpaper.Infrastructure\WeatherWallpaper.Infrastructure.csproj" />
+    <ProjectReference Include="..\WeatherWallpaper.Domain\WeatherWallpaper.Domain.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net10.0</TargetFramework>
