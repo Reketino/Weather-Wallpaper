@@ -1,1 +1,1 @@
-﻿
+﻿using WeatherWallpaper.Core;
