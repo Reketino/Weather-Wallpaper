@@ -9,7 +9,7 @@ public partial class WindowsWallpaperService : IWallpaperService
     private const int SPIF_UPDATEINIFILE = 0X01;
     private const int SPIF_SENDCHANGE = 0X02;
 
-    [LibraryImport("user32.dll", SetLastError = true, StringMarshalling = StringMarshalling.Utf16)]
+    [LibraryImport("user32.dll", SetLastError = true)]
     
     private static partial bool SystemParametersInfo(
         int uAction,
