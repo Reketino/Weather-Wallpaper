@@ -29,5 +29,9 @@ static async Task RunOnce(
         wallpaperService.SetWallpaper(image);
         Console.WriteLine($"Wallpaper changed: {image}");
     }
-    
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error Mayday: {ex.Message}");
+    }
+
 }
