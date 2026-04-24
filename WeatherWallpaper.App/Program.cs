@@ -24,5 +24,9 @@ static async Task RunOnce(
     {
         var weather = await weatherService.GetWeatherAsync();
         Console.WriteLine($"{weather.Temperature}°C | {weather.Condition}");
+
+        var image = BackgroundSelector.Select(weather.Condition);
+        wallpaperService.SetWallpaper(image);
+        
     }
 }
