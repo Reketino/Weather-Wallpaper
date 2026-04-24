@@ -4,7 +4,7 @@ using WeatherWallpaper.Domain;
 
 namespace WeatherWallpaper.Infrastructure;
 
-public class OpenWeatherService : IWeatherService
+public class MetWeatherService : IWeatherService
 {
     private readonly HttpClient _http = new();
     
