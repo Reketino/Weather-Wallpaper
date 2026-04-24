@@ -3,5 +3,5 @@
 A work in progress pc application, that changes your background based on weather
 
 ### Working On
--  Background image storage
+-  Unsplash API for image
 
