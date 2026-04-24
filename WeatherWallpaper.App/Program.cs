@@ -27,6 +27,7 @@ static async Task RunOnce(
 
         var image = BackgroundSelector.Select(weather.Condition);
         wallpaperService.SetWallpaper(image);
-        
+        Console.WriteLine($"Wallpaper changed: {image}");
     }
+    
 }
