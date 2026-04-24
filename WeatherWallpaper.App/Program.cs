@@ -6,3 +6,11 @@ Console.WriteLine("Weather Wallpaper starting...");
 IWeatherService weatherService = new MetWeatherService();
 IWallpaperService wallpaperService = new WindowsWallpaperService();
 var selector = new BackgroundSelector();
+
+while (true)
+{
+    await RunOnce(weatherService, wallpaperService, selector);
+
+    Console.WriteLine("We are waiting 30 mins for engine to start running🏃🏻‍➡️...\n");
+    await Task.Delay(TimeSpan.FromMinutes(30));
+}
