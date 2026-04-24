@@ -33,5 +33,4 @@ static async Task RunOnce(
     {
         Console.WriteLine($"Error Mayday: {ex.Message}");
     }
-
 }
