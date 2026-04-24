@@ -19,3 +19,10 @@ static async Task RunOnce(
     IWeatherService weatherService,
     IWallpaperService wallpaperService,
     BackgroundSelector selector)
+{
+    try
+    {
+        var weather = await weatherService.GetWeatherAsync();
+        Console.WriteLine($"{weather.Temperature}°C | {weather.Condition}");
+    }
+}
