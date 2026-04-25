@@ -6,4 +6,6 @@ namespace WeatherWallpaper.Infrastructure.Wallpapers;
 public class UnsplashWallpaperService : IWallpaperProvider
 {
     private readonly HttpClient _http = new();
+
+    public async Task<string> GetWallpaperAsync(string condition)
 }
