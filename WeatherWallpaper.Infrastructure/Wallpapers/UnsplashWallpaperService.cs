@@ -8,4 +8,7 @@ public class UnsplashWallpaperService : IWallpaperProvider
     private readonly HttpClient _http = new();
 
     public async Task<string> GetWallpaperAsync(string condition)
+    {
+        var query = condition switch
+    }
 }
