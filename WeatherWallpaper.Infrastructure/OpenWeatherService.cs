@@ -56,7 +56,7 @@ public class MetWeatherService : IWeatherService
             return "Snow";
 
         if (symbol.Contains("cloud"))
-            return "Cloud";
+            return "Clouds";
 
         return "Clear";
     }

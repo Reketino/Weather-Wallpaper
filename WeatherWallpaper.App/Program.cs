@@ -12,7 +12,7 @@ while (true)
     await RunOnce(weatherService, wallpaperService, selector);
 
     Console.WriteLine("We are waiting 30 mins for engine to start running🏃🏻‍➡️...\n");
-    await Task.Delay(TimeSpan.FromMinutes(30));
+    await Task.Delay(TimeSpan.FromMinutes(10));
 }
 
 static async Task RunOnce(
