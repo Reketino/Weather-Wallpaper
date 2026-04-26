@@ -11,7 +11,9 @@ public class UnsplashWallpaperService : IWallpaperProvider
     {
         var query = condition switch
         {
-            
+            "Rain" => "rainy city night neon",
+            "Snow" => "snow city street lights",
+            "Clouds" => "cloudy city skyline"
         };
     }
 }
