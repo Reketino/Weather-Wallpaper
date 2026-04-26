@@ -23,6 +23,7 @@ public partial class WindowsWallpaperService : IWallpaperService
         if (!File.Exists(fullPath))
         {
             Console.WriteLine($"[Wallpaper] File not found: {fullPath}");
+            return;
         }
 
         var result = SystemParametersInfo(
