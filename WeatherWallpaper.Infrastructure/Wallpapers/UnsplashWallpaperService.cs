@@ -13,7 +13,8 @@ public class UnsplashWallpaperService : IWallpaperProvider
         {
             "Rain" => "rainy city night neon",
             "Snow" => "snow city street lights",
-            "Clouds" => "cloudy city skyline"
+            "Clouds" => "cloudy city skyline",
+            _ => "sunny city skyline"
         };
     }
 }
