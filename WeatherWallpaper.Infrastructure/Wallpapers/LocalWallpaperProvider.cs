@@ -42,5 +42,7 @@ public class LocalWallpaperProvider : IWallpaperProvider
         var selected = files[_random.Next(files.Length)];
 
         Console.WriteLine($"[DEBUG] Selected: {selected}");
+
+        return Task.FromResult(selected);
     }
 }
