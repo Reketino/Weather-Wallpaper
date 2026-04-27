@@ -38,5 +38,9 @@ public class LocalWallpaperProvider : IWallpaperProvider
         {
             return Task.FromResult(Path.Combine(_basePath, "default.jpg"));
         }
+
+        var selected = files[_random.Next(files.Length)];
+
+        Console.WriteLine($"[DEBUG] Selected: {selected}");
     }
 }
