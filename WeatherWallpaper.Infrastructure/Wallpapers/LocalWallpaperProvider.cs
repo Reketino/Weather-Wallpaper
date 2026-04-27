@@ -30,6 +30,10 @@ public class LocalWallpaperProvider : IWallpaperProvider
             return Task.FromResult(Path.Combine(_basePath, "default.jpg"));
         }
 
+        var files = Directory.GetFiles(path);
+
+        Console.WriteLine($"[DEBUG] Files found: {files.Length}");
+
         if (files.Length == 0)
         {
             return Task.FromResult(Path.Combine(_basePath, "default.jpg"));
