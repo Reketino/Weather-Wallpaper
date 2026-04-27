@@ -1,5 +1,6 @@
 ﻿using WeatherWallpaper.Core;
 using WeatherWallpaper.Infrastructure;
+using WeatherWallpaper.Infrastructure.Wallpapers;
 
 Console.WriteLine("Weather Wallpaper starting...");
 
