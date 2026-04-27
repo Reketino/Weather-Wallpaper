@@ -11,4 +11,13 @@ public class LocalWallpaperProvider : IWallpaperProvider
   private readonly Random _random = new();  
 
   public Task<string> GetWallpaperAsync(string condition)
+    {
+        var folder = condition switch
+        {
+            "Rain" => "Rain",
+            "Snow" => "Snow",
+            "Clouds" => "Clouds",
+            _ => "Clear"
+        };
+    }
 }
