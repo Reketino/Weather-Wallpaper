@@ -21,7 +21,12 @@ public class LocalWallpaperProvider : IWallpaperProvider
         };
 
         var path = Path.Combine(_basePath, folder);
-        
+
         Console.WriteLine($"[DEBUG] Checking folder: {path}");
+
+        if (files.Length == 0)
+        {
+            return Task.FromResult(Path.Combine(_basePath, "default.jpg"));
+        }
     }
 }
