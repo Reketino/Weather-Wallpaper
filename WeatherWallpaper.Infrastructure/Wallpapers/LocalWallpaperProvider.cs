@@ -24,6 +24,8 @@ public class LocalWallpaperProvider : IWallpaperProvider
 
         Console.WriteLine($"[DEBUG] Checking folder: {path}");
 
+        if (!Directory.Exists(path))
+
         if (files.Length == 0)
         {
             return Task.FromResult(Path.Combine(_basePath, "default.jpg"));
