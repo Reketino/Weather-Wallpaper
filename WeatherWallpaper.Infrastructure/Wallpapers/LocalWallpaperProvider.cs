@@ -4,7 +4,7 @@ namespace WeatherWallpaper.Infrastructure.Wallpapers;
 
 public class LocalWallpaperProvider : IWallpaperProvider
 {
-  private readonly string_basePath = Path.GetFullPath(
+  private readonly string _basePath = Path.GetFullPath(
     Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Assests")
   );
 
@@ -19,5 +19,9 @@ public class LocalWallpaperProvider : IWallpaperProvider
             "Clouds" => "Clouds",
             _ => "Clear"
         };
+
+        var path = Path.Combine(_basePath, folder);
+        
+        Console.WriteLine($"[DEBUG] Checking folder: {path}");
     }
 }
