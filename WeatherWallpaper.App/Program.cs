@@ -21,7 +21,7 @@ while (true)
 static async Task RunOnce(
     IWeatherService weatherService,
     IWallpaperService wallpaperService,
-    BackgroundSelector selector)
+    IWallpaperProvider wallpaperProvider)
 {
     try
     {
