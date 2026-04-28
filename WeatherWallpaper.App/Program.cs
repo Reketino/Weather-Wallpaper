@@ -7,7 +7,7 @@ Console.WriteLine("Weather Wallpaper starting...");
 IWeatherService weatherService = new MetWeatherService();
 IWallpaperService wallpaperService = new WindowsWallpaperService();
 IWallpaperProvider wallpaperProvider = new LocalWallpaperProvider();
-var selector = new BackgroundSelector();
+
 
 
 while (true)
@@ -29,7 +29,7 @@ static async Task RunOnce(
         Console.WriteLine($"{weather.Temperature}°C | {weather.Condition}");
 
         var image = await wallpaperProvider.GetWallpaperAsync(weather.Condition);
-        
+
         wallpaperService.SetWallpaper(image);
         Console.WriteLine($"Wallpaper changed: {image}");
     }
