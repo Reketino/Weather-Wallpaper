@@ -12,7 +12,7 @@ var selector = new BackgroundSelector();
 
 while (true)
 {
-    await RunOnce(weatherService, wallpaperService, selector);
+    await RunOnce(weatherService, wallpaperService, wallpaperProvider);
 
     Console.WriteLine("We are waiting 30 mins for engine to start running🏃🏻‍➡️...\n");
     await Task.Delay(TimeSpan.FromMinutes(10));
