@@ -6,7 +6,9 @@ Console.WriteLine("Weather Wallpaper starting...");
 
 IWeatherService weatherService = new MetWeatherService();
 IWallpaperService wallpaperService = new WindowsWallpaperService();
+IWallpaperProvider wallpaperProvider = new LocalWallpaperProvider();
 var selector = new BackgroundSelector();
+
 
 while (true)
 {
