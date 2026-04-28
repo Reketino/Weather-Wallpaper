@@ -1,15 +1,18 @@
 ﻿using WeatherWallpaper.Core;
 using WeatherWallpaper.Infrastructure;
+using WeatherWallpaper.Infrastructure.Wallpapers;
 
 Console.WriteLine("Weather Wallpaper starting...");
 
 IWeatherService weatherService = new MetWeatherService();
 IWallpaperService wallpaperService = new WindowsWallpaperService();
-var selector = new BackgroundSelector();
+IWallpaperProvider wallpaperProvider = new LocalWallpaperProvider();
+
+
 
 while (true)
 {
-    await RunOnce(weatherService, wallpaperService, selector);
+    await RunOnce(weatherService, wallpaperService, wallpaperProvider);
 
     Console.WriteLine("We are waiting 30 mins for engine to start running🏃🏻‍➡️...\n");
     await Task.Delay(TimeSpan.FromMinutes(10));
@@ -18,14 +21,15 @@ while (true)
 static async Task RunOnce(
     IWeatherService weatherService,
     IWallpaperService wallpaperService,
-    BackgroundSelector selector)
+    IWallpaperProvider wallpaperProvider)
 {
     try
     {
         var weather = await weatherService.GetWeatherAsync();
         Console.WriteLine($"{weather.Temperature}°C | {weather.Condition}");
 
-        var image = BackgroundSelector.Select(weather.Condition);
+        var image = await wallpaperProvider.GetWallpaperAsync(weather.Condition);
+
         wallpaperService.SetWallpaper(image);
         Console.WriteLine($"Wallpaper changed: {image}");
     }

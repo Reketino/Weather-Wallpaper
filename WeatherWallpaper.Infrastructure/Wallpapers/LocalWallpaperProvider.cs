@@ -5,7 +5,7 @@ namespace WeatherWallpaper.Infrastructure.Wallpapers;
 public class LocalWallpaperProvider : IWallpaperProvider
 {
   private readonly string _basePath = Path.GetFullPath(
-    Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Assests")
+    Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "Assets")
   );
 
   private readonly Random _random = new();  
