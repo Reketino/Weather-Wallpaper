@@ -24,5 +24,11 @@ internal static class Program
             Visible = true,
             Text = "Weather Wallpaper"
         };
+
+        var menu = new ContextMenuStrip();
+        menu.Items.Add("Update now", null, async (s, e) =>
+        {
+            
+        })
     }
 }
