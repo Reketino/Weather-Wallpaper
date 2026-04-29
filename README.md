@@ -3,5 +3,5 @@
 A work in progress pc application, that changes your background based on weather
 
 ### Working On
--  Converting Script to Tray App
+-  Adding logic to tray application
 
