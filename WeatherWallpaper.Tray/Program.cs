@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using WeatherWallpaper.Core;
 using WeatherWallpaper.Infrastructure;
@@ -16,5 +17,12 @@ internal static class Program
         var weatherService = new MetWeatherService();
         var wallpaperService = new WindowsWallpaperService();
         var wallpaperProvider = new LocalWallpaperProvider();
+
+        var tray = new NotifyIcon()
+        {
+            Icon = FileSystemAclExtensions.Application,
+            Visible = true,
+            Text = "Weather Wallpaper"
+        };
     }
 }
