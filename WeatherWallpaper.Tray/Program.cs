@@ -26,6 +26,9 @@ internal static class Program
         };
 
         var menu = new ContextMenuStrip();
-        
+        menu.Items.Add("Update now", null, async (s, e) =>
+        {
+            
+        })
     }
 }
