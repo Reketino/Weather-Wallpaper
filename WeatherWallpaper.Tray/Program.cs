@@ -24,5 +24,8 @@ internal static class Program
             Visible = true,
             Text = "Weather Wallpaper"
         };
+
+        var menu = new ContextMenuStrip();
+        
     }
 }
