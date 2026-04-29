@@ -12,5 +12,9 @@ internal static class Program
     static void Main()
     {
         ApplicationConfiguration.initialize();
+
+        var weatherService = new MetWeatherService();
+        var wallpaperService = new WindowsWallpaperService();
+        var wallpaperProvider = new LocalWallpaperProvider();
     }
 }
