@@ -50,5 +50,11 @@ internal static class Program
         {
             await Safeupdate(weatherService, wallpaperService, wallpaperProvider);
         };
+
+        timer.Start();
+
+        _ = SafeUpdate(weatherService, wallpaperService, wallpaperProvider);
+
+        Application.Run();
     }
 }
