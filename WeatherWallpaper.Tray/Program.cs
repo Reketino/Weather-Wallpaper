@@ -40,5 +40,6 @@ internal static class Program
         tray.ContextMenuStrip = menu;
 
         var timer = new System.Windows.Forms.Timer();
+        timer.Interval = 10 * 60 * 1000;
     }
 }
