@@ -30,5 +30,11 @@ internal static class Program
         {
            await UpdateWallpaper(weatherService, wallpaperService, wallpaperProvider); 
         });
+
+        menu.Items.Add("Exit", null, (s, e) =>
+        {
+            tray.Visible = false;
+            ApplicationException.Exit();
+        });
     }
 }
