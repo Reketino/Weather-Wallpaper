@@ -57,4 +57,9 @@ internal static class Program
 
         Application.Run();
     }
+
+    private static async Task SafeUpdate(
+        IWeatherService weatherService,
+        IWallpaperService wallpaperService,
+        IWallpaperProvider wallpaperProvider)
 }
