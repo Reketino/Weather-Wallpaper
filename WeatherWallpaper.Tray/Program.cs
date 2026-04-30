@@ -36,5 +36,8 @@ internal static class Program
             tray.Visible = false;
             ApplicationException.Exit();
         });
+
+        tray.ContextMenuStrip = menu;
+        
     }
 }
