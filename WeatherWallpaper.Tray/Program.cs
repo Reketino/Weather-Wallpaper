@@ -65,5 +65,10 @@ internal static class Program
     {
         if (!await _semaphore.WaitAsync(0))
         return;
+
+        try
+        {
+            var weather = await weatherService.GetWeatherAsync();
+        }
     }
 }
