@@ -48,7 +48,7 @@ internal static class Program
 
         timer.Tick += async (s, e) =>
         {
-            await UpdateWallpaper(weatherService, wallpaperService, wallpaperProvider);
+            await Safeupdate(weatherService, wallpaperService, wallpaperProvider);
         };
     }
 }
