@@ -41,5 +41,10 @@ internal static class Program
 
         var timer = new System.Windows.Forms.Timer();
         timer.Interval = 10 * 60 * 1000;
+
+        timer.Tick += async (s, e) =>
+        {
+            await UpdateWallpaper(weatherService, wallpaperService, wallpaperProvider);
+        };
     }
 }
