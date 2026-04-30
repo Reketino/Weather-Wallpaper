@@ -9,6 +9,8 @@ namespace WeatherWallpaper.Tray;
 
 internal static class Program
 {
+    private static readonly SemaphoreSlim _semaphore = new (1, 1);
+
     [STAThread]
     static void Main()
     {
