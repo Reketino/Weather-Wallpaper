@@ -62,4 +62,8 @@ internal static class Program
         IWeatherService weatherService,
         IWallpaperService wallpaperService,
         IWallpaperProvider wallpaperProvider)
+    {
+        if (!await _semaphore.WaitAsync(0))
+        return;
+    }
 }
