@@ -71,7 +71,7 @@ internal static class Program
             var weather = await weatherService.GetWeatherAsync();
             var image = wallpaperProvider.GetWallpaperAsync(weather.Condition);
 
-            wallpaperService.setWallpaper(image);
+            wallpaperService.SetWallpaper(image);
 
             Console.WriteLine($"Updated: {weather.Condition}");
         }
