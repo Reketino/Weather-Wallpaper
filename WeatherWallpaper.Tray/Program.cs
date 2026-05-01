@@ -32,7 +32,7 @@ internal static class Program
         var menu = new ContextMenuStrip();
         menu.Items.Add("Update now", null, async (s, e) =>
         {
-           await UpdateWallpaper(weatherService, wallpaperService, wallpaperProvider); 
+           await SafeUpdate(weatherService, wallpaperService, wallpaperProvider); 
         });
 
         menu.Items.Add("Exit", null, (s, e) =>
@@ -50,7 +50,7 @@ internal static class Program
 
         timer.Tick += async (s, e) =>
         {
-            await Safeupdate(weatherService, wallpaperService, wallpaperProvider);
+            await SafeUpdate(weatherService, wallpaperService, wallpaperProvider);
         };
 
         timer.Start();
