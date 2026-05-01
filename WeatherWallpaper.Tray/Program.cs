@@ -38,7 +38,7 @@ internal static class Program
         menu.Items.Add("Exit", null, (s, e) =>
         {
             tray.Visible = false;
-            ApplicationException.Exit();
+            Application.Exit();
         });
 
         tray.ContextMenuStrip = menu;
