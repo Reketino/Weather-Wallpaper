@@ -1,7 +1,3 @@
-using System;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using WeatherWallpaper.Core;
 using WeatherWallpaper.Infrastructure;
 using WeatherWallpaper.Infrastructure.Wallpapers;
@@ -71,7 +67,7 @@ internal static class Program
         try
         {
             var weather = await weatherService.GetWeatherAsync();
-            var image = wallpaperProvider.GetWallpaperAsync(weather.Condition);
+            var image =  await wallpaperProvider.GetWallpaperAsync(weather.Condition);
 
             wallpaperService.SetWallpaper(image);
 
