@@ -15,7 +15,8 @@ internal static class Program
     [STAThread]
     static void Main()
     {
-        ApplicationConfiguration.initialize();
+        Application.EnableVisualStyles();
+        Application.SetCompatibleTextRenderingDefault(false);
 
         var weatherService = new MetWeatherService();
         var wallpaperService = new WindowsWallpaperService();
@@ -23,7 +24,7 @@ internal static class Program
 
         var tray = new NotifyIcon()
         {
-            Icon = FileSystemAclExtensions.Application,
+            Icon = SystemIcons.Application,
             Visible = true,
             Text = "Weather Wallpaper"
         };
@@ -31,13 +32,13 @@ internal static class Program
         var menu = new ContextMenuStrip();
         menu.Items.Add("Update now", null, async (s, e) =>
         {
-           await UpdateWallpaper(weatherService, wallpaperService, wallpaperProvider); 
+           await SafeUpdate(weatherService, wallpaperService, wallpaperProvider); 
         });
 
         menu.Items.Add("Exit", null, (s, e) =>
         {
             tray.Visible = false;
-            ApplicationException.Exit();
+            Application.Exit();
         });
 
         tray.ContextMenuStrip = menu;
@@ -49,7 +50,7 @@ internal static class Program
 
         timer.Tick += async (s, e) =>
         {
-            await Safeupdate(weatherService, wallpaperService, wallpaperProvider);
+            await SafeUpdate(weatherService, wallpaperService, wallpaperProvider);
         };
 
         timer.Start();
