@@ -75,5 +75,13 @@ internal static class Program
 
             Console.WriteLine($"Updated: {weather.Condition}");
         }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[Error] {ex.Message}");
+        }
+        finally
+        {
+            _semaphore.Release();
+        }
     }
 }
