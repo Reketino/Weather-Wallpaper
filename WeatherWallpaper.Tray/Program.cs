@@ -69,6 +69,8 @@ internal static class Program
         try
         {
             var weather = await weatherService.GetWeatherAsync();
+            var image = wallpaperProvider.GetWallpaperAsync(weather.Condition);
+            
         }
     }
 }
