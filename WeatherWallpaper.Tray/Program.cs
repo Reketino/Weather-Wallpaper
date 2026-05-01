@@ -15,7 +15,7 @@ internal static class Program
     [STAThread]
     static void Main()
     {
-        ApplicationConfiguration.initialize();
+        Application.EnableVisualStyles();
 
         var weatherService = new MetWeatherService();
         var wallpaperService = new WindowsWallpaperService();
@@ -23,7 +23,7 @@ internal static class Program
 
         var tray = new NotifyIcon()
         {
-            Icon = FileSystemAclExtensions.Application,
+            Icon = SystemIcons.Application,
             Visible = true,
             Text = "Weather Wallpaper"
         };
