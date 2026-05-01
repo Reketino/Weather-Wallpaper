@@ -69,6 +69,19 @@ internal static class Program
         try
         {
             var weather = await weatherService.GetWeatherAsync();
+            var image = wallpaperProvider.GetWallpaperAsync(weather.Condition);
+
+            wallpaperService.setWallpaper(image);
+
+            Console.WriteLine($"Updated: {weather.Condition}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[Error] {ex.Message}");
+        }
+        finally
+        {
+            _semaphore.Release();
         }
     }
 }
