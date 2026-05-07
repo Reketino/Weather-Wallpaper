@@ -15,5 +15,7 @@ public static class IconMapper
           _ => "sun.ico",
 
         };
+
+        var path = Path.Combine(basePath, file);
     }  
 }
