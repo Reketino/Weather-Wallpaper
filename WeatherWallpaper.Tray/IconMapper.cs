@@ -17,5 +17,9 @@ public static class IconMapper
         };
 
         var path = Path.Combine(basePath, file);
+
+        return File.Exists(path)
+        ? new Icon(path)
+        : SystemIcons.Application;
     }  
 }
