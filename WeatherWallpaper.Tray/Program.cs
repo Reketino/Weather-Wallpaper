@@ -28,7 +28,7 @@ internal static class Program
         var menu = new ContextMenuStrip();
         menu.Items.Add("Update now", null, async (s, e) =>
         {
-           await SafeUpdate(weatherService, wallpaperService, wallpaperProvider); 
+           await SafeUpdate(weatherService, wallpaperService, wallpaperProvider, tray); 
         });
 
         menu.Items.Add("Exit", null, (s, e) =>
@@ -46,12 +46,12 @@ internal static class Program
 
         timer.Tick += async (s, e) =>
         {
-            await SafeUpdate(weatherService, wallpaperService, wallpaperProvider);
+            await SafeUpdate(weatherService, wallpaperService, wallpaperProvider, tray);
         };
 
         timer.Start();
 
-        _ = SafeUpdate(weatherService, wallpaperService, wallpaperProvider);
+        _ = SafeUpdate(weatherService, wallpaperService, wallpaperProvider, tray);
 
         Application.Run();
     }
@@ -59,7 +59,8 @@ internal static class Program
     private static async Task SafeUpdate(
         IWeatherService weatherService,
         IWallpaperService wallpaperService,
-        IWallpaperProvider wallpaperProvider)
+        IWallpaperProvider wallpaperProvider,
+        NotifyIcon tray)
     {
         if (!await _semaphore.WaitAsync(0))
         return;
