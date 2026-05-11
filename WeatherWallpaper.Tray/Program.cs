@@ -68,6 +68,10 @@ internal static class Program
         try
         {
             var weather = await weatherService.GetWeatherAsync();
+
+            tray.Icon = IconMapper.GetIcon(weather.Condition);
+            tray.Text = $"Weather: {weather.Condition}";
+
             var image =  await wallpaperProvider.GetWallpaperAsync(weather.Condition);
 
             wallpaperService.SetWallpaper(image);
