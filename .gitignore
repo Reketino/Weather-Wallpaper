@@ -483,3 +483,9 @@ $RECYCLE.BIN/
 
 # Intern Husky
 *.husky/_/
+
+# C# Dev Kit cache
+*.lscache
+
+# VS Code C# cache
+.vscode/.csharp/
