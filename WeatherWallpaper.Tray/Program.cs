@@ -20,7 +20,7 @@ internal static class Program
 
         var tray = new NotifyIcon()
         {
-            Icon = SystemIcons.Application,
+            Icon = IconMapper.GetIcon("Clear"),
             Visible = true,
             Text = "Weather Wallpaper"
         };
