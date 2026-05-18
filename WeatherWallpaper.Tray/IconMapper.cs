@@ -18,7 +18,7 @@ public static class IconMapper
 
         var path = Path.Combine(basePath, file);
 
-        Console.WriteLine($"Loding icon: {path}");
+        Console.WriteLine($"Loading icon: {path}");
 
         return File.Exists(path)
         ? new Icon(path)
