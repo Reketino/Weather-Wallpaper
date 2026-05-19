@@ -20,8 +20,15 @@ public static class IconMapper
 
         Console.WriteLine($"Loading icon: {path}");
 
-        return File.Exists(path)
-        ? new Icon(path)
-        : SystemIcons.Application;
+        if (!File.Exists(path))
+    {
+      Console.WriteLine("Icon not found going to fallback");
+      return SystemIcons.Application;
+    }
+    var icon = new Icon(path);
+
+    Console.WriteLine( $"Icon size: {icon.Size.Width}x{icon.Size.Height}");
+
+    return icon;
     }  
 }
