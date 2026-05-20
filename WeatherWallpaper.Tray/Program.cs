@@ -70,7 +70,7 @@ internal static class Program
             var weather = await weatherService.GetWeatherAsync();
 
             tray.Icon = IconMapper.GetIcon(weather.Condition);
-            tray.Text = $"Weather: {weather.Condition}";
+            tray.Text = $"Weather: {weather.Condition} | {weather.Temperature:F1}°C";
 
             var image =  await wallpaperProvider.GetWallpaperAsync(weather.Condition);
 
