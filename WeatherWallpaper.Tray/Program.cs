@@ -8,6 +8,8 @@ internal static class Program
 {
     private static readonly SemaphoreSlim _semaphore = new (1, 1);
 
+    private static string? _lastCondition;
+
     [STAThread]
     static void Main()
     {
@@ -70,7 +72,7 @@ internal static class Program
             var weather = await weatherService.GetWeatherAsync();
 
             tray.Icon = IconMapper.GetIcon(weather.Condition);
-            tray.Text = $"Weather: {weather.Condition}";
+            tray.Text = $"Weather: {weather.Condition} | {weather.Temperature:F1}°C";
 
             var image =  await wallpaperProvider.GetWallpaperAsync(weather.Condition);
 
