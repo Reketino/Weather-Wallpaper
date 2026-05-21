@@ -8,6 +8,8 @@ internal static class Program
 {
     private static readonly SemaphoreSlim _semaphore = new (1, 1);
 
+    private static string? _lastCondition;
+
     [STAThread]
     static void Main()
     {
