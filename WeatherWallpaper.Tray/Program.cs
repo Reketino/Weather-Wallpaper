@@ -71,6 +71,11 @@ internal static class Program
         {
             var weather = await weatherService.GetWeatherAsync();
 
+            if (_lastCondition == weather.Condition)
+            {
+                
+            }
+
             tray.Icon = IconMapper.GetIcon(weather.Condition);
             tray.Text = $"Weather: {weather.Condition} | {weather.Temperature:F1}°C";
 
