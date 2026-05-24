@@ -77,6 +77,7 @@ internal static class Program
 
                 return;
             }
+            _lastCondition = weather.Condition;
 
             tray.Icon = IconMapper.GetIcon(weather.Condition);
             tray.Text = $"Weather: {weather.Condition} | {weather.Temperature:F1}°C";
