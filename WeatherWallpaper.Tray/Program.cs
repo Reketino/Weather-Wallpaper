@@ -73,7 +73,9 @@ internal static class Program
 
             if (_lastCondition == weather.Condition)
             {
-                
+                Console.WriteLine($"Skipping wallpaper upd8 ({weather.Condition})");
+
+                return;
             }
 
             tray.Icon = IconMapper.GetIcon(weather.Condition);
