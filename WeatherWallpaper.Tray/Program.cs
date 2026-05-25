@@ -71,6 +71,9 @@ internal static class Program
         {
             var weather = await weatherService.GetWeatherAsync();
 
+            tray.Icon = IconMapper.GetIcon(weather.Condition);
+            tray.Text = $"Weather: {weather.Condition} | {weather.Temperature:F1}°C";
+
             if (_lastCondition == weather.Condition)
             {
                 Console.WriteLine($"Skipping wallpaper upd8 ({weather.Condition})");
@@ -78,9 +81,6 @@ internal static class Program
                 return;
             }
             _lastCondition = weather.Condition;
-
-            tray.Icon = IconMapper.GetIcon(weather.Condition);
-            tray.Text = $"Weather: {weather.Condition} | {weather.Temperature:F1}°C";
 
             var image =  await wallpaperProvider.GetWallpaperAsync(weather.Condition);
 
