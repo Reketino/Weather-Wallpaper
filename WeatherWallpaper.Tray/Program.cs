@@ -86,7 +86,7 @@ internal static class Program
 
             wallpaperService.SetWallpaper(image);
 
-            Console.WriteLine($"Updated: {weather.Condition}");
+            Console.WriteLine($"Updated: {weather.Condition} | {weather.Temperature:F1}°C");
         }
         catch (Exception ex)
         {
