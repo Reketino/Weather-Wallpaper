@@ -2,5 +2,10 @@ namespace WeatherWallpaper.Core;
 
 public sealed class AppSettings
 {
+   public WeatherSettings Weather { get; set; } = new(); 
+}
+
+public sealed class WeatherSettings
+{
     
 }
