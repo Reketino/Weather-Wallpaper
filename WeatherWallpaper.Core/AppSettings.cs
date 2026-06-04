@@ -7,5 +7,6 @@ public sealed class AppSettings
 
 public sealed class WeatherSettings
 {
+   public double Latitude { get; set; }
     
 }
