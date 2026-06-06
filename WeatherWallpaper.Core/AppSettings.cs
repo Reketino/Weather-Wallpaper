@@ -11,3 +11,8 @@ public sealed class WeatherSettings
    public double Longitude { get; set; }
     
 }
+
+public sealed class WallpaperSettings
+{
+   
+}
