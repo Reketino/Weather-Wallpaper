@@ -15,5 +15,5 @@ public sealed class WeatherSettings
 
 public sealed class WallpaperSettings
 {
-   
+   public int UpdateIntervalMinutes { get; set; }
 }
