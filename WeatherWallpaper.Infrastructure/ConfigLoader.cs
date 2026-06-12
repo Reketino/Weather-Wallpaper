@@ -5,5 +5,8 @@ namespace WeatherWallpaper.Infrastructure;
 
 public static class ConfigLoader
 {
-    
+    public static AppSettings Load()
+    {
+        
+    }
 }
