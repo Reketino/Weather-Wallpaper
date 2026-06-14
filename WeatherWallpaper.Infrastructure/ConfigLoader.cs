@@ -7,6 +7,9 @@ public static class ConfigLoader
 {
     public static AppSettings Load()
     {
-        
+       var json = File.ReadAllText("appsettings.json");
+
+       return JsonSerializer.Deserialize<AppSettings>(json)
+            ?? new AppSettings(); 
     }
 }
