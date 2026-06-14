@@ -16,6 +16,8 @@ internal static class Program
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
 
+        var config = ConfigLoader.Load();
+
         var weatherService = new MetWeatherService();
         var wallpaperService = new WindowsWallpaperService();
         var wallpaperProvider = new LocalWallpaperProvider();
