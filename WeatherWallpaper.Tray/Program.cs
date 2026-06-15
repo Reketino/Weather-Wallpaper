@@ -45,7 +45,7 @@ internal static class Program
 
         var timer = new System.Windows.Forms.Timer
         {
-            Interval = 10 * 60 * 1000
+            Interval = config.Wallpaper.UpdateIntervalMinutes * 60 * 1000
         };
 
         timer.Tick += async (s, e) =>
