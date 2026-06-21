@@ -4,5 +4,5 @@ namespace WeatherWallpaper.Core;
 
 public interface ILocationService
 {
-    
+    Task<LocationData> GetLocationAsync();
 }
