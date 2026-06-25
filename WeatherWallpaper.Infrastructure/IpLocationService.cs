@@ -10,6 +10,8 @@ public sealed class IpLocationService : ILocationService
 
     public async Task<LocationData> GetLocationAsync()
     {
-        
+        var json = await _http.GetStringAsync(
+            "https://ipapi.co/json"
+        );
     }
 }
