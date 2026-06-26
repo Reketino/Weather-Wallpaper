@@ -13,5 +13,7 @@ public sealed class IpLocationService : ILocationService
         var json = await _http.GetStringAsync(
             "https://ipapi.co/json"
         );
+
+        using var document = JsonDocument.Parse(json);
     }
 }
