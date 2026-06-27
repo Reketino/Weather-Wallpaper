@@ -15,5 +15,12 @@ public sealed class IpLocationService : ILocationService
         );
 
         using var document = JsonDocument.Parse(json);
+
+        return new LocationData
+        {
+            City = document.RootElement
+                .GetProperty("city")
+                .GetString() ?? "Unknown",
+        };
     }
 }
