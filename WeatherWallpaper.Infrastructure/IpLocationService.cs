@@ -21,6 +21,10 @@ public sealed class IpLocationService : ILocationService
             City = document.RootElement
                 .GetProperty("city")
                 .GetString() ?? "Unknown",
+
+            Latitude = document.RootElement
+                    .GetProperty("Latitude")
+                    .GetDouble(),
         };
     }
 }
