@@ -25,6 +25,10 @@ public sealed class IpLocationService : ILocationService
             Latitude = document.RootElement
                     .GetProperty("Latitude")
                     .GetDouble(),
+
+            Longitude = document.RootElement
+                    .GetProperty("Longitude")
+                    .GetDouble()
         };
     }
 }
