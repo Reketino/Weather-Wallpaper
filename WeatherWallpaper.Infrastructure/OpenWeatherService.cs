@@ -7,6 +7,8 @@ namespace WeatherWallpaper.Infrastructure;
 public class MetWeatherService : IWeatherService
 {
     private readonly HttpClient _http = new();
+    private readonly double _latitude;
+    
     
     public async Task<WeatherData> GetWeatherAsync()
     {
