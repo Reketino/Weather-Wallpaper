@@ -8,6 +8,7 @@ public class MetWeatherService : IWeatherService
 {
     private readonly HttpClient _http = new();
     private readonly double _latitude;
+    private readonly double _longitude;
     
     
     public async Task<WeatherData> GetWeatherAsync()
