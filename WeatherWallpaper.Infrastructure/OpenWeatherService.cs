@@ -13,7 +13,7 @@ public class MetWeatherService : IWeatherService
     
     public async Task<WeatherData> GetWeatherAsync()
     {
-        var url = "https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=62.38&lon=6.44";
+        var url = "https://api.met.no/weatherapi/locationforecast/2.0/compact?lat={_latitude}&lon={_longitude}";
 
         var request = new HttpRequestMessage(HttpMethod.Get, url);
         request.Headers.Add("User-Agent", "weather-wallpaper-app"); 
