@@ -23,11 +23,11 @@ public sealed class IpLocationService : ILocationService
                 .GetString() ?? "Unknown",
 
             Latitude = document.RootElement
-                    .GetProperty("Latitude")
+                    .GetProperty("latitude")
                     .GetDouble(),
 
             Longitude = document.RootElement
-                    .GetProperty("Longitude")
+                    .GetProperty("longitude")
                     .GetDouble()
         };
     }

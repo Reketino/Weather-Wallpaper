@@ -4,11 +4,20 @@ using WeatherWallpaper.Infrastructure.Wallpapers;
 
 Console.WriteLine("Weather Wallpaper starting...");
 
-IWeatherService weatherService = new MetWeatherService();
+ILocationService locationService = new IpLocationService();
+
+var location = await locationService.GetLocationAsync();
+Console.WriteLine($" Location: {location.City}");
+Console.WriteLine($" Latitude: {location.Latitude}");
+Console.WriteLine($" Longitude: {location.Longitude}");
+
+IWeatherService weatherService = new MetWeatherService(
+    location.Latitude,
+    location.Longitude
+);
+
 IWallpaperService wallpaperService = new WindowsWallpaperService();
 IWallpaperProvider wallpaperProvider = new LocalWallpaperProvider();
-
-
 
 while (true)
 {
