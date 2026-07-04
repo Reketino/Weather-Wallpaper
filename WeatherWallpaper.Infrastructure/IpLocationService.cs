@@ -11,7 +11,7 @@ public sealed class IpLocationService : ILocationService
     public async Task<LocationData> GetLocationAsync()
     {
         var json = await _http.GetStringAsync(
-            "https://ipapi.co/json"
+            "https://ipwho.is/"
         );
 
         using var document = JsonDocument.Parse(json);
