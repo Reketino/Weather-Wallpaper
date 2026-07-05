@@ -10,9 +10,17 @@ public sealed class IpLocationService : ILocationService
 
     public async Task<LocationData> GetLocationAsync()
     {
-        var json = await _http.GetStringAsync(
+        var request = new HttpRequestMessage(
+            HttpMethod.Get,
             "https://ipwho.is/"
         );
+
+        request.Headers.UserAgent.ParseAdd("WeatherWallpaper/1.0");
+
+        var response = await _http.SendAsync(request);
+        response.EnsureSuccessStatusCode();
+
+        var json = await response.Content.ReadAsStringAsync();
 
         using var document = JsonDocument.Parse(json);
 
