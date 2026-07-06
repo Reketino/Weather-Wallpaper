@@ -18,6 +18,7 @@ public sealed class IpLocationService : ILocationService
         request.Headers.UserAgent.ParseAdd("WeatherWallpaper/1.0");
 
         var response = await _http.SendAsync(request);
+        Console.WriteLine($"Location API:{(int)response.StatusCode} {response.StatusCode}");
         response.EnsureSuccessStatusCode();
 
         var json = await response.Content.ReadAsStringAsync();
