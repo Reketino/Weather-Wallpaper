@@ -25,7 +25,7 @@ public sealed class IpLocationService : ILocationService
 
         using var document = JsonDocument.Parse(json);
 
-        return new LocationData
+        var location = new LocationData
         {
             City = document.RootElement
                 .GetProperty("city")
@@ -39,5 +39,10 @@ public sealed class IpLocationService : ILocationService
                     .GetProperty("longitude")
                     .GetDouble()
         };
+
+        Console.WriteLine(
+            $"{location.City} ({location.Latitude}, {location.Longitude})");
+
+            return location;
     }
 }
