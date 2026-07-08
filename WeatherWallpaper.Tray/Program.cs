@@ -1,4 +1,5 @@
 using WeatherWallpaper.Core;
+using WeatherWallpaper.Domain;
 using WeatherWallpaper.Infrastructure;
 using WeatherWallpaper.Infrastructure.Wallpapers;
 
@@ -11,14 +12,21 @@ internal static class Program
     private static string? _lastCondition;
 
     [STAThread]
-    static void Main()
+    static async Task Main()
     {
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
 
         var config = ConfigLoader.Load();
 
-        var weatherService = new MetWeatherService();
+        ILocationService locationService = new IpLocationService();
+        var location = await locationService.GetLocationAsync();
+        Console.WriteLine($" {location.City}");
+
+        var weatherService = new MetWeatherService(
+            location.Latitude,
+            location.Longitude
+        );
         var wallpaperService = new WindowsWallpaperService();
         var wallpaperProvider = new LocalWallpaperProvider();
 
