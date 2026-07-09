@@ -23,7 +23,7 @@ internal static class Program
         var location = await locationService.GetLocationAsync();
         Console.WriteLine($" {location.City}");
 
-        var weatherService = new MetWeatherService(
+        IWeatherService weatherService = new MetWeatherService(
             location.Latitude,
             location.Longitude
         );
