@@ -27,8 +27,8 @@ internal static class Program
             location.Latitude,
             location.Longitude
         );
-        var wallpaperService = new WindowsWallpaperService();
-        var wallpaperProvider = new LocalWallpaperProvider();
+        IWallpaperService wallpaperService = new WindowsWallpaperService();
+        IWallpaperProvider wallpaperProvider = new LocalWallpaperProvider();
 
         var tray = new NotifyIcon()
         {
