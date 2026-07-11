@@ -21,7 +21,7 @@ internal static class Program
 
         ILocationService locationService = new IpLocationService();
         var location = await locationService.GetLocationAsync();
-        Console.WriteLine($" {location.City}");
+        Console.WriteLine($" {location.City} ({location.Latitude:F4}, {location.Longitude:F4})");
 
         IWeatherService weatherService = new MetWeatherService(
             location.Latitude,
