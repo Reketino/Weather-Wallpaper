@@ -4,5 +4,6 @@ namespace WeatherWallpaper.Core;
 
 public interface IStateService
 {
+    Task<WallpaperState?> LoadAsync();
     
 }
