@@ -7,9 +7,13 @@ namespace WeatherWallpaper.Infrastructure;
 public sealed class StateService : IStateService
 {
     private readonly string _path = 
-    Path.Combine(
-        Environment.GetFolderPath(
-            Environment.SpecialFolder.LocalApplicationData),
+        Path.Combine(
+            Environment.GetFolderPath(
+                Environment.SpecialFolder.LocalApplicationData),
         "WeatherWallpaper", 
         "state.json");
+    public async Task<WallpaperState?> LoadAsync()
+    {
+        
+    }
 }
