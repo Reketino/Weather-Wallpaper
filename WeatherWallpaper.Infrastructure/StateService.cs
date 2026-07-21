@@ -12,8 +12,14 @@ public sealed class StateService : IStateService
                 Environment.SpecialFolder.LocalApplicationData),
         "WeatherWallpaper", 
         "state.json");
+
     public async Task<WallpaperState?> LoadAsync()
     {
-        
+        if (!File.Exists(_path))
+        return null;
+
+        var json = await File.ReadAllTextAsync(_path);
+
+        return JsonSerializer.Deserialize<WallpaperState>(json);
     }
 }
