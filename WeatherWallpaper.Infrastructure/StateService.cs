@@ -22,4 +22,9 @@ public sealed class StateService : IStateService
 
         return JsonSerializer.Deserialize<WallpaperState>(json);
     }
+
+    public async Task SaveAsync(WallpaperState state)
+    {
+        var folder = Path.GetDirectoryName(_path)!;
+    }
 }
