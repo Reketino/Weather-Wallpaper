@@ -26,5 +26,7 @@ public sealed class StateService : IStateService
     public async Task SaveAsync(WallpaperState state)
     {
         var folder = Path.GetDirectoryName(_path)!;
+
+        Directory.CreateDirectory(folder);
     }
 }
