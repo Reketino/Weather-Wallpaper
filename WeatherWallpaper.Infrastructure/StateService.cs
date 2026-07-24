@@ -6,6 +6,11 @@ namespace WeatherWallpaper.Infrastructure;
 
 public sealed class StateService : IStateService
 {
+    private static readonly JsonSerializerOptions _jsonOptions = new()
+    {
+        WriteIndented = true
+    };
+
     private readonly string _path = 
         Path.Combine(
             Environment.GetFolderPath(
@@ -28,5 +33,12 @@ public sealed class StateService : IStateService
         var folder = Path.GetDirectoryName(_path)!;
 
         Directory.CreateDirectory(folder);
+
+        var json = JsonSerializer.Serialize(
+            state,
+            _jsonOptions
+        );
+
+        await File.WriteAllTextAsync(_path, json);
     }
 }
