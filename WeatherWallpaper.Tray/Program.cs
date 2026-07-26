@@ -20,9 +20,14 @@ internal static class Program
         var config = ConfigLoader.Load();
 
         IStateService stateService = new StateService();
+        
         var state = await stateService.LoadAsync();
         if (state is not null)
         {
+            _lastCondition = state.LastCondition;
+
+            Console.WriteLine(
+                $"Loaded state: {_lastCondition}");
             
         }
 
