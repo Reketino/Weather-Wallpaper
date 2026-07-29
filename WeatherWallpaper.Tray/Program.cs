@@ -109,6 +109,14 @@ internal static class Program
 
             wallpaperService.SetWallpaper(image);
 
+            await stateService.SaveAsync(
+                new WallpaperState
+                {
+                    LastCondition = weather.Condition,
+                    LastWallpaper = Path.GetFileName(image)
+                }
+            );
+
             Console.WriteLine($"Updated: {weather.Condition} | {weather.Temperature:F1}°C");
         }
         catch (Exception ex)
