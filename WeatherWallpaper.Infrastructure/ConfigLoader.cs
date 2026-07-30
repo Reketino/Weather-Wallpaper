@@ -7,7 +7,11 @@ public static class ConfigLoader
 {
     public static AppSettings Load()
     {
-       var json = File.ReadAllText("appsettings.json");
+       var path = Path.Combine(
+        AppContext.BaseDirectory,
+        "appsettings.json");
+
+        var json = File.ReadAllText(path);
 
        return JsonSerializer.Deserialize<AppSettings>(json)
             ?? new AppSettings(); 
