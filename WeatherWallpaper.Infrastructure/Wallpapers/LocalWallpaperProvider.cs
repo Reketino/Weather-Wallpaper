@@ -10,7 +10,10 @@ public class LocalWallpaperProvider : IWallpaperProvider
 
   private readonly Random _random = new();  
 
-  public Task<string> GetWallpaperAsync(string condition)
+  public Task<string> GetWallpaperAsync(
+    string condition,
+    string? lastWallpaper = null
+    )
     {
         var folder = condition switch
         {
