@@ -92,6 +92,7 @@ internal static class Program
 
         try
         {
+            var state = await stateService.LoadAsync();
             var weather = await weatherService.GetWeatherAsync();
 
             tray.Icon = IconMapper.GetIcon(weather.Condition);
@@ -105,7 +106,10 @@ internal static class Program
             }
             _lastCondition = weather.Condition;
 
-            var image =  await wallpaperProvider.GetWallpaperAsync(weather.Condition);
+            var image =  await wallpaperProvider.GetWallpaperAsync(
+                weather.Condition,
+                state?.LastWallpaper
+                );
 
             wallpaperService.SetWallpaper(image);
 
