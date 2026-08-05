@@ -7,6 +7,11 @@ public sealed class SettingsForm : Form
 {
     public SettingsForm()
     {
+        InitializeWindow();
+    }
+
+    private void InitializeWindow()
+    {
         
     }
 }
