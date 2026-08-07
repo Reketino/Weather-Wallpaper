@@ -13,5 +13,9 @@ public sealed class SettingsForm : Form
     private void InitializeWindow()
     {
         Text = "Weather Wallpaper Settingss";
+
+        StartPosition = FormStartPosition.CenterScreen;
+
+        FormBorderStyle = FormBorderStyle.FixedDialog;
     }
 }
