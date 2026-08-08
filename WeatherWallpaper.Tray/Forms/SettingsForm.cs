@@ -17,5 +17,10 @@ public sealed class SettingsForm : Form
         StartPosition = FormStartPosition.CenterScreen;
 
         FormBorderStyle = FormBorderStyle.FixedDialog;
+
+        MaximizeBox = false;
+        MinimizeBox = false;
+
+        
     }
 }
