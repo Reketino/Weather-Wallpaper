@@ -21,6 +21,6 @@ public sealed class SettingsForm : Form
         MaximizeBox = false;
         MinimizeBox = false;
 
-        
+        ClientSize = new Size(520, 420);
     }
 }
