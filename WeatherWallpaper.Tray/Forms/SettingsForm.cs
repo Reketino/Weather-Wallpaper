@@ -22,5 +22,7 @@ public sealed class SettingsForm : Form
         MinimizeBox = false;
 
         ClientSize = new Size(520, 420);
+
+        Font = new Font("Segoe UI", 10);
     }
 }
