@@ -2,6 +2,7 @@ using WeatherWallpaper.Core;
 using WeatherWallpaper.Domain;
 using WeatherWallpaper.Infrastructure;
 using WeatherWallpaper.Infrastructure.Wallpapers;
+using WeatherWallpaper.Tray.Forms;
 
 namespace WeatherWallpaper.Tray;
 
