@@ -56,6 +56,13 @@ internal static class Program
            await SafeUpdate(weatherService, wallpaperService, wallpaperProvider, stateService, tray); 
         });
 
+        menu.Items.Add("Settings...", null, (s, e) =>
+        {
+            using var form = new SettingsForm();
+
+            form.ShowDialog();
+        });
+
         menu.Items.Add("Exit", null, (s, e) =>
         {
             tray.Visible = false;
