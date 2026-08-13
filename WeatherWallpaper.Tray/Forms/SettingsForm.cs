@@ -1,18 +1,24 @@
 using System.Drawing;
 using System.Windows.Forms;
+using WeatherWallpaper.Core;
 
 namespace WeatherWallpaper.Tray.Forms;
 
 public sealed class SettingsForm : Form
 {
-    public SettingsForm()
+    private readonly AppSettings _config;
+
+    private readonly NumericUpDown _updateInterval;
+    public SettingsForm(AppSettings config)
     {
-        InitializeWindow();
+        _config = config;
+        _updateInterval = new NumericUpDown();
+        
     }
 
     private void InitializeWindow()
     {
-        Text = "Weather Wallpaper Settingss";
+        Text = "Weather Wallpaper Settings";
 
         StartPosition = FormStartPosition.CenterScreen;
 
