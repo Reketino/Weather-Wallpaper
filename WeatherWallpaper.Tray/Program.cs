@@ -58,7 +58,7 @@ internal static class Program
 
         menu.Items.Add("Settings...", null, (s, e) =>
         {
-            using var form = new SettingsForm();
+            using var form = new SettingsForm(config);
 
             form.ShowDialog();
         });
