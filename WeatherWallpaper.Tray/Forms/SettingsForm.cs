@@ -13,6 +13,8 @@ public sealed class SettingsForm : Form
     {
         _config = config;
         _updateInterval = new NumericUpDown();
+
+        InitializeWindow();
         
     }
 
