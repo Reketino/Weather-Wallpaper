@@ -15,7 +15,7 @@ public sealed class SettingsForm : Form
         _updateInterval = new NumericUpDown();
 
         InitializeWindow();
-        
+        InitializeControls();
     }
 
     private void InitializeWindow()
