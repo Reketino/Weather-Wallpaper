@@ -33,4 +33,9 @@ public sealed class SettingsForm : Form
 
         Font = new Font("Segoe UI", 10);
     }
+
+    private void InitializeControls()
+    {
+        
+    }
 }
