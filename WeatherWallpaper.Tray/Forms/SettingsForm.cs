@@ -36,6 +36,11 @@ public sealed class SettingsForm : Form
 
     private void InitializeControls()
     {
-        
+        var updateIntervalLabel = new Label
+        {
+            Text = "Update interval",
+            AutoSize = true,
+            Location = new Point(30, 30)
+        };
     }
 }
