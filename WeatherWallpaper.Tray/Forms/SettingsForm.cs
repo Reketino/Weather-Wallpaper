@@ -42,5 +42,8 @@ public sealed class SettingsForm : Form
             AutoSize = true,
             Location = new Point(30, 30)
         };
+
+        _updateInterval.Minimum = 1;
+        
     }
 }
