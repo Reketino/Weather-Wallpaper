@@ -44,6 +44,6 @@ public sealed class SettingsForm : Form
         };
 
         _updateInterval.Minimum = 1;
-        
+        _updateInterval.Maximum = 1440;
     }
 }
