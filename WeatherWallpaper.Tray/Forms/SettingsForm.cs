@@ -43,7 +43,8 @@ public sealed class SettingsForm : Form
             Location = new Point(30, 30)
         };
 
-        _updateInterval.Minimum = 1;
-        _updateInterval.Maximum = 1440;
+        _updateIntervalInput.Minimum = 1;
+        _updateIntervalInput.Maximum = 1440;
+        _updateIntervalInput.Value = config.Wallpaper.UpdateIntervalMinutes;
     }
 }
