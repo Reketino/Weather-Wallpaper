@@ -48,5 +48,9 @@ public sealed class SettingsForm : Form
         _updateIntervalInput.Value = config.Wallpaper.UpdateIntervalMinutes;
         _updateIntervalInput.Location = new Point(30, 60);
         
+        var minutesLabel = new Label
+        {
+            
+        };
     }
 }
