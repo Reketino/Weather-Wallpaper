@@ -50,6 +50,8 @@ public sealed class SettingsForm : Form
         
         var minutesLabel = new Label
         {
+            Text="minutes",
+            AutoSize = true,
             
         };
     }
