@@ -8,11 +8,11 @@ public sealed class SettingsForm : Form
 {
     private readonly AppSettings _config;
 
-    private readonly NumericUpDown _updateInterval;
+    private readonly NumericUpDown _updateIntervalInput;
     public SettingsForm(AppSettings config)
     {
         _config = config;
-        _updateInterval = new NumericUpDown();
+        _updateIntervalInput = new NumericUpDown();
 
         InitializeWindow();
         InitializeControls();
@@ -45,14 +45,21 @@ public sealed class SettingsForm : Form
 
         _updateIntervalInput.Minimum = 1;
         _updateIntervalInput.Maximum = 1440;
-        _updateIntervalInput.Value = config.Wallpaper.UpdateIntervalMinutes;
+        _updateIntervalInput.Value = _config.Wallpaper.UpdateIntervalMinutes;
         _updateIntervalInput.Location = new Point(30, 60);
         
         var minutesLabel = new Label
         {
             Text="minutes",
             AutoSize = true,
-            
+            Location = new Point(140, 63)
+        };
+
+        var saveButton = new Button
+        {
+            Text = "Save",
+            Width = 100,
+            Location = new Point(290, 350)
         };
     }
 }
