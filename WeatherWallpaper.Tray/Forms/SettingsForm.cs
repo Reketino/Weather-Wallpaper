@@ -66,7 +66,9 @@ public sealed class SettingsForm : Form
 
         var cancelButton = new Button
         {
-            
+            Text = "Cancel",
+            Width = 100,
+            Location = new Point(400, 350)
         };
     }
 }
