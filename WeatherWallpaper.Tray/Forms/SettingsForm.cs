@@ -70,5 +70,9 @@ public sealed class SettingsForm : Form
             Width = 100,
             Location = new Point(400, 350)
         };
+
+        cancelButton.Click += (_, _) => Close();
+
+        
     }
 }
