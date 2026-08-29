@@ -73,6 +73,7 @@ public sealed class SettingsForm : Form
 
         cancelButton.Click += (_, _) => Close();
 
+        Controls.Add(updateIntervalLabel);
         
     }
 }
