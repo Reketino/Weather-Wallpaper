@@ -75,6 +75,8 @@ public sealed class SettingsForm : Form
 
         Controls.Add(updateIntervalLabel);
         Controls.Add(_updateIntervalInput);
+        Controls.Add(minutesLabel);
+        
         
     }
 }
