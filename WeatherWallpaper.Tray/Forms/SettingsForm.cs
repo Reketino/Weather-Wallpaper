@@ -80,5 +80,8 @@ public sealed class SettingsForm : Form
         Controls.Add(cancelButton);
     }
 
-    
+    private void SaveButton_Click(object? sender, EventArgs e)
+    {
+        
+    }
 }
