@@ -82,6 +82,7 @@ public sealed class SettingsForm : Form
 
     private void SaveButton_Click(object? sender, EventArgs e)
     {
-        
+        _config.Wallpaper.UpdateIntervalMinutes =
+        (int)_updateIntervalInput.Value;
     }
 }
