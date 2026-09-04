@@ -84,5 +84,7 @@ public sealed class SettingsForm : Form
     {
         _config.Wallpaper.UpdateIntervalMinutes =
         (int)_updateIntervalInput.Value;
+
+        Close();
     }
 }
