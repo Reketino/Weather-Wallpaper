@@ -5,6 +5,10 @@ namespace WeatherWallpaper.Infrastructure;
 
 public static class ConfigLoader
 {
+    private static readonly JsonSerializerOptions _jsonOptions = new()
+    {
+        WriteIndented = true
+    };
     public static AppSettings Load()
     {
        var path = Path.Combine(
