@@ -20,4 +20,9 @@ public static class ConfigLoader
        return JsonSerializer.Deserialize<AppSettings>(json)
             ?? new AppSettings(); 
     }
+
+    public static void Save(AppSettings config)
+    {
+        
+    }
 }
