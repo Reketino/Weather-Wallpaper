@@ -23,6 +23,9 @@ public static class ConfigLoader
 
     public static void Save(AppSettings config)
     {
-        
+        var path = Path.Combine(
+            AppContext.BaseDirectory,
+            "appsettings.json"
+        );
     }
 }
