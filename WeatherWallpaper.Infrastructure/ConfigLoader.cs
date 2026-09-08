@@ -27,5 +27,8 @@ public static class ConfigLoader
             AppContext.BaseDirectory,
             "appsettings.json"
         );
+
+        var json = JsonSerializer.Serialize(config, _jsonOptions);
+        
     }
 }
