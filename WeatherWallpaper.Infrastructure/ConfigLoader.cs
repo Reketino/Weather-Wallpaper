@@ -30,5 +30,6 @@ public static class ConfigLoader
 
         var json = JsonSerializer.Serialize(config, _jsonOptions);
         
+        File.WriteAllText(path, json);
     }
 }
