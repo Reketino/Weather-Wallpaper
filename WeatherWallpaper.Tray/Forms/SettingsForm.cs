@@ -1,6 +1,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using WeatherWallpaper.Core;
+using WeatherWallpaper.Infrastructure;
 
 namespace WeatherWallpaper.Tray.Forms;
 
@@ -84,6 +85,8 @@ public sealed class SettingsForm : Form
     {
         _config.Wallpaper.UpdateIntervalMinutes =
         (int)_updateIntervalInput.Value;
+
+        ConfigLoader.Save(_config);
 
         Close();
     }
