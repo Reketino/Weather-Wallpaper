@@ -1,5 +1,4 @@
-using System.Drawing;
-using System.Windows.Forms;
+
 using WeatherWallpaper.Core;
 using WeatherWallpaper.Infrastructure;
 
@@ -10,11 +9,14 @@ public sealed class SettingsForm : Form
     private readonly AppSettings _config;
 
     private readonly NumericUpDown _updateIntervalInput;
-    public SettingsForm(AppSettings config)
+    public SettingsForm(
+        AppSettings config,
+        Action? onSettingsSaved = null)
     {
         _config = config;
+         _onSettingsSaved = onSettingsSaved;
         _updateIntervalInput = new NumericUpDown();
-
+       
         InitializeWindow();
         InitializeControls();
     }
