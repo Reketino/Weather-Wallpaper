@@ -7,6 +7,7 @@ namespace WeatherWallpaper.Tray.Forms;
 public sealed class SettingsForm : Form
 {
     private readonly AppSettings _config;
+    private readonly Action? _onSettingsSaved;
 
     private readonly NumericUpDown _updateIntervalInput;
     public SettingsForm(
