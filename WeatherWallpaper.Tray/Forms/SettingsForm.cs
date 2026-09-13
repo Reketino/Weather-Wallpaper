@@ -90,6 +90,8 @@ public sealed class SettingsForm : Form
         (int)_updateIntervalInput.Value;
 
         ConfigLoader.Save(_config);
+        
+        _onSettingsSaved?.Invoke();
 
         Close();
     }
