@@ -49,6 +49,14 @@ internal static class Program
             Visible = true,
             Text = "Weather Wallpaper"
         };
+        
+        var timer = new System.Windows.Forms.Timer
+        {
+            Interval = 
+                config.Wallpaper.UpdateIntervalMinutes
+                * 60
+                * 1000
+        };
 
         var menu = new ContextMenuStrip();
         menu.Items.Add("Update now", null, async (s, e) =>
@@ -58,7 +66,16 @@ internal static class Program
 
         menu.Items.Add("Settings...", null, (s, e) =>
         {
-            using var form = new SettingsForm(config);
+            using var form = new SettingsForm(
+                config,
+                () =>
+                {
+                    timer.Interval =
+                    config.Wallpaper.UpdateIntervalMinutes
+                    * 60
+                    * 1000; 
+                }
+                );
 
             form.ShowDialog();
         });
@@ -70,11 +87,6 @@ internal static class Program
         });
 
         tray.ContextMenuStrip = menu;
-
-        var timer = new System.Windows.Forms.Timer
-        {
-            Interval = config.Wallpaper.UpdateIntervalMinutes * 60 * 1000
-        };
 
         timer.Tick += async (s, e) =>
         {
