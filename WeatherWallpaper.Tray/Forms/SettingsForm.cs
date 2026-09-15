@@ -16,6 +16,7 @@ public sealed class SettingsForm : Form
     {
         _config = config;
          _onSettingsSaved = onSettingsSaved;
+         
         _updateIntervalInput = new NumericUpDown();
        
         InitializeWindow();
@@ -49,7 +50,8 @@ public sealed class SettingsForm : Form
 
         _updateIntervalInput.Minimum = 1;
         _updateIntervalInput.Maximum = 1440;
-        _updateIntervalInput.Value = _config.Wallpaper.UpdateIntervalMinutes;
+        _updateIntervalInput.Value = 
+                _config.Wallpaper.UpdateIntervalMinutes;
         _updateIntervalInput.Location = new Point(30, 60);
         _updateIntervalInput.Width = 100;
         
@@ -88,7 +90,7 @@ public sealed class SettingsForm : Form
     private void SaveButton_Click(object? sender, EventArgs e)
     {
         _config.Wallpaper.UpdateIntervalMinutes =
-        (int)_updateIntervalInput.Value;
+            (int)_updateIntervalInput.Value;
 
         ConfigLoader.Save(_config);
         
