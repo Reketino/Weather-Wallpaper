@@ -124,8 +124,7 @@ internal static class Program
 
                 return;
             }
-            _lastCondition = weather.Condition;
-
+            
             var image =  await wallpaperProvider.GetWallpaperAsync(
                 weather.Condition,
                 state?.LastWallpaper
@@ -140,6 +139,8 @@ internal static class Program
                     LastWallpaper = Path.GetFileName(image)
                 }
             );
+
+            _lastCondition = weather.Condition;
 
             Console.WriteLine($"Updated: {weather.Condition} | {weather.Temperature:F1}°C");
         }
