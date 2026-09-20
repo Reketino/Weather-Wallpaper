@@ -8,6 +8,7 @@ public sealed class AppSettings
 
 public sealed class WeatherSettings
 {
+   public bool AutomaticLocation { get; set; } = true;
    public double Latitude { get; set; }
    public double Longitude { get; set; }
     
