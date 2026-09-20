@@ -32,14 +32,36 @@ internal static class Program
             
         }
 
-        ILocationService locationService = new IpLocationService();
-        var location = await locationService.GetLocationAsync();
-        Console.WriteLine($" {location.City} ({location.Latitude:F4}, {location.Longitude:F4})");
+        double latitude;
+        double longitude;
 
-        IWeatherService weatherService = new MetWeatherService(
-            location.Latitude,
-            location.Longitude
-        );
+        if (config.Weather.AutomaticLocation)
+        {
+            ILocationService locationService = new IpLocationService();
+
+            var location = await locationService.GetLocationAsync();
+
+            latitude = location.Latitude;
+            longitude = location.Longitude;
+
+            Console.WriteLine(
+                $"Automatic location: {location.City}" +
+                $"({latitude:F4}, {longitude:F4})");
+    }
+    else
+    {
+        latitude = config.Weather.Latitude;
+        longitude = config.Weather.Longitude;
+
+        Console.WriteLine(
+            $"Manual location: ({latitude:F4}, {longitude:F4})");
+    }
+
+    IWeatherService weatherService = new MetWeatherService(
+        latitude,
+        longitude
+    );
+
         IWallpaperService wallpaperService = new WindowsWallpaperService();
         IWallpaperProvider wallpaperProvider = new LocalWallpaperProvider();
 
