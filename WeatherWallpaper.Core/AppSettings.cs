@@ -10,7 +10,7 @@ public sealed class WeatherSettings
 {
    public bool AutomaticLocation { get; set; } = true;
    public double Latitude { get; set; } = 62.38;
-   public double Longitude { get; set; }
+   public double Longitude { get; set; } = 6.44;
     
 }
 
