@@ -8,8 +8,10 @@ public sealed class SettingsForm : Form
 {
     private readonly AppSettings _config;
     private readonly Action? _onSettingsSaved;
-
+    
     private readonly NumericUpDown _updateIntervalInput;
+    private readonly CheckBox _automaticLocationInput;
+
     public SettingsForm(
         AppSettings config,
         Action? onSettingsSaved = null)
