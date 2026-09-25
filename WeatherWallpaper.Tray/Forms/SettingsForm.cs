@@ -12,7 +12,7 @@ public sealed class SettingsForm : Form
     private readonly NumericUpDown _updateIntervalInput;
     private readonly CheckBox _automaticLocationInput;
     private readonly NumericUpDown _latitudeInput;
-    
+    private readonly NumericUpDown _longitudeInput;
 
     public SettingsForm(
         AppSettings config,
