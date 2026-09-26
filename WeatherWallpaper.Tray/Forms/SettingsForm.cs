@@ -22,6 +22,8 @@ public sealed class SettingsForm : Form
          _onSettingsSaved = onSettingsSaved;
          
         _updateIntervalInput = new NumericUpDown();
+        _automaticLocationInput = new CheckBox();
+        
        
         InitializeWindow();
         InitializeControls();
