@@ -23,6 +23,7 @@ public sealed class SettingsForm : Form
          
         _updateIntervalInput = new NumericUpDown();
         _automaticLocationInput = new CheckBox();
+        _latitudeInput = new NumericUpDown();
         
        
         InitializeWindow();
