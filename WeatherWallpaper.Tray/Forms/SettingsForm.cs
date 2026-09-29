@@ -70,6 +70,11 @@ public sealed class SettingsForm : Form
             Location = new Point(140, 63)
         };
 
+        var automaticLocationLabel = new Label
+        {
+            
+        };
+
         var saveButton = new Button
         {
             Text = "Save",
