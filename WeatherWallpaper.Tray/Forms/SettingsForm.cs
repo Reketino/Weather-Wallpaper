@@ -72,7 +72,9 @@ public sealed class SettingsForm : Form
 
         var automaticLocationLabel = new Label
         {
-            
+            Text = "Location",
+            AutoSize = true,
+            Location = new Point(30, 105)
         };
 
         var saveButton = new Button
