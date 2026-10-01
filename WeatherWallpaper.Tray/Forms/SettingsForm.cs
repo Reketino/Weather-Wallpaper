@@ -77,6 +77,8 @@ public sealed class SettingsForm : Form
             Location = new Point(30, 105)
         };
 
+        _automaticLocationInput.Text = "Use automatic location";
+
         var saveButton = new Button
         {
             Text = "Save",
