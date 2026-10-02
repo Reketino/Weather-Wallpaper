@@ -78,6 +78,7 @@ public sealed class SettingsForm : Form
         };
 
         _automaticLocationInput.Text = "Use automatic location";
+        _automaticLocationInput.AutoSize = true;
 
         var saveButton = new Button
         {
