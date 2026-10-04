@@ -80,6 +80,8 @@ public sealed class SettingsForm : Form
         _automaticLocationInput.Text = "Use automatic location";
         _automaticLocationInput.AutoSize = true;
         _automaticLocationInput.Location = new Point(30, 135);
+        _automaticLocationInput.Checked =
+            _config.Weather.AutomaticLocation;
 
         var saveButton = new Button
         {
