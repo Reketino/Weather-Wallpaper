@@ -83,6 +83,12 @@ public sealed class SettingsForm : Form
         _automaticLocationInput.Checked =
             _config.Weather.AutomaticLocation;
 
+
+        var latitudeLabel = new Label
+        {
+            
+        };
+
         var saveButton = new Button
         {
             Text = "Save",
