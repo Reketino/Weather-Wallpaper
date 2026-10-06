@@ -86,6 +86,7 @@ public sealed class SettingsForm : Form
 
         var latitudeLabel = new Label
         {
+            Text = "Latitude",
             
         };
 
