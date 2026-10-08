@@ -88,6 +88,7 @@ public sealed class SettingsForm : Form
         {
             Text = "Latitude",
             AutoSize = true,
+            Location = new Point(30, 180)
             
         };
 
