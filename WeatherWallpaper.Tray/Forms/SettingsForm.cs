@@ -89,8 +89,10 @@ public sealed class SettingsForm : Form
             Text = "Latitude",
             AutoSize = true,
             Location = new Point(30, 180)
-            
         };
+
+        _latitudeInput.Minimum = -90;
+        
 
         var saveButton = new Button
         {
