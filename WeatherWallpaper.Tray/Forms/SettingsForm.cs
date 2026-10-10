@@ -92,6 +92,7 @@ public sealed class SettingsForm : Form
         };
 
         _latitudeInput.Minimum = -90;
+        _latitudeInput.Maximum = 90;
         
 
         var saveButton = new Button
