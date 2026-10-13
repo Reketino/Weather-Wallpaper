@@ -95,8 +95,9 @@ public sealed class SettingsForm : Form
         _latitudeInput.Maximum = 90;
         _latitudeInput.DecimalPlaces = 6;
         _latitudeInput.Increment = 0.000001M;
-        
-        
+        _latitudeInput.Value =
+            (decimal)_config.Weather.Latitude;
+
 
         var saveButton = new Button
         {
