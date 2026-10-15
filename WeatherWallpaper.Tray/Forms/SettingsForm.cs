@@ -98,6 +98,7 @@ public sealed class SettingsForm : Form
         _latitudeInput.Value =
             (decimal)_config.Weather.Latitude;
         _latitudeInput.Location = new Point(30, 210);
+        _latitudeInput.Width = 140;
 
 
         var saveButton = new Button
