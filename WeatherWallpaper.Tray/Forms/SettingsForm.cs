@@ -100,7 +100,6 @@ public sealed class SettingsForm : Form
         _latitudeInput.Location = new Point(30, 210);
         _latitudeInput.Width = 140;
 
-
         var saveButton = new Button
         {
             Text = "Save",
@@ -122,6 +121,9 @@ public sealed class SettingsForm : Form
         Controls.Add(updateIntervalLabel);
         Controls.Add(_updateIntervalInput);
         Controls.Add(minutesLabel);
+
+        Controls.Add(automaticLocationLabel);
+        
         Controls.Add(saveButton);
         Controls.Add(cancelButton);
     }
