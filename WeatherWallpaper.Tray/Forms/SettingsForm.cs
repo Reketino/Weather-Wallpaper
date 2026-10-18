@@ -123,6 +123,7 @@ public sealed class SettingsForm : Form
         Controls.Add(minutesLabel);
 
         Controls.Add(automaticLocationLabel);
+        Controls.Add(_automaticLocationInput);
         
         Controls.Add(saveButton);
         Controls.Add(cancelButton);
