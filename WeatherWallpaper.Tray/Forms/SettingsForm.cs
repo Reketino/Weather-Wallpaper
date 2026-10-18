@@ -124,6 +124,8 @@ public sealed class SettingsForm : Form
 
         Controls.Add(automaticLocationLabel);
         Controls.Add(_automaticLocationInput);
+
+        Controls.Add(latitudeLabel);
         
         Controls.Add(saveButton);
         Controls.Add(cancelButton);
