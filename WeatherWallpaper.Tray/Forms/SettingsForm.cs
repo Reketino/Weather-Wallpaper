@@ -138,8 +138,10 @@ public sealed class SettingsForm : Form
         object? sender,
         EventArgs e)
     {
-        
+        UpdateManualLocationState();
     }
+
+    
 
     private void SaveButton_Click(object? sender, EventArgs e)
     {
