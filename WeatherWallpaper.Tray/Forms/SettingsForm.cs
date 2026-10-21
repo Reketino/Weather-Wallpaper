@@ -134,6 +134,13 @@ public sealed class SettingsForm : Form
         UpdateManualLocationState();
     }
 
+    private void _automaticLocationInput_CheckedChanged(
+        object? sender,
+        EventArgs e)
+    {
+        
+    }
+
     private void SaveButton_Click(object? sender, EventArgs e)
     {
         _config.Wallpaper.UpdateIntervalMinutes =
