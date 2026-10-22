@@ -141,6 +141,11 @@ public sealed class SettingsForm : Form
         UpdateManualLocationState();
     }
 
+    private void UpdateManualLocationState()
+    {
+        
+    }
+
     
 
     private void SaveButton_Click(object? sender, EventArgs e)
