@@ -146,7 +146,7 @@ public sealed class SettingsForm : Form
         var manualLocationEnabled = !_automaticLocationInput.Checked;
 
         _latitudeInput.Enabled = manualLocationEnabled;
-        
+        _longitudeInput.Enabled = manualLocationEnabled;
     }
 
     
