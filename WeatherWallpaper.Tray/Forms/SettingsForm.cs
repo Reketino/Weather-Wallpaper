@@ -155,6 +155,9 @@ public sealed class SettingsForm : Form
     {
         _config.Wallpaper.UpdateIntervalMinutes =
             (int)_updateIntervalInput.Value;
+        
+        _config.Weather.AutomaticLocation =
+            _automaticLocationInput.Checked;
 
         ConfigLoader.Save(_config);
         
