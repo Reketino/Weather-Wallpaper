@@ -158,6 +158,9 @@ public sealed class SettingsForm : Form
         
         _config.Weather.AutomaticLocation =
             _automaticLocationInput.Checked;
+        
+        _config.Weather.Latitude =
+            (double)_longitudeInput.Value;
 
         ConfigLoader.Save(_config);
         
