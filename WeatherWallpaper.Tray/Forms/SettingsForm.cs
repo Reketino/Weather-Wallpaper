@@ -134,7 +134,7 @@ public sealed class SettingsForm : Form
         UpdateManualLocationState();
     }
 
-    private void _automaticLocationInput_CheckedChanged(
+    private void AutomaticLocationInput_CheckedChanged(
         object? sender,
         EventArgs e)
     {
@@ -160,6 +160,9 @@ public sealed class SettingsForm : Form
             _automaticLocationInput.Checked;
         
         _config.Weather.Latitude =
+            (double)_longitudeInput.Value;
+
+        _config.Weather.Longitude =
             (double)_longitudeInput.Value;
 
         ConfigLoader.Save(_config);
