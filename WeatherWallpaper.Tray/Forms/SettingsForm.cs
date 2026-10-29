@@ -1,4 +1,5 @@
-
+using System.Drawing;
+using System.Windows.Forms;
 using WeatherWallpaper.Core;
 using WeatherWallpaper.Infrastructure;
 
