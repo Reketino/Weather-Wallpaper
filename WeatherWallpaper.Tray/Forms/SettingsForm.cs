@@ -27,7 +27,6 @@ public sealed class SettingsForm : Form
         _latitudeInput = new NumericUpDown();
         _longitudeInput = new NumericUpDown();
         
-       
         InitializeWindow();
         InitializeControls();
     }
@@ -84,6 +83,8 @@ public sealed class SettingsForm : Form
         _automaticLocationInput.Checked =
             _config.Weather.AutomaticLocation;
 
+        _automaticLocationInput.CheckedChanged +=
+            AutomaticLocationInput_CheckedChanged;
 
         var latitudeLabel = new Label
         {
