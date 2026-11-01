@@ -98,7 +98,15 @@ public sealed class SettingsForm : Form
             _config.Weather.Latitude,
             -90,
             90,
-            new Point(30, 210));
+            new Point(30, 210)
+        );
+
+        var LongitudeLabel = new Label
+        {
+            Text = "Longitude",
+            AutoSize = true,
+            Location = new Point(200, 180)
+        };
             
         var saveButton = new Button
         {
