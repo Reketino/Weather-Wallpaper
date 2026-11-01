@@ -93,15 +93,13 @@ public sealed class SettingsForm : Form
             Location = new Point(30, 180)
         };
 
-        _latitudeInput.Minimum = -90;
-        _latitudeInput.Maximum = 90;
-        _latitudeInput.DecimalPlaces = 6;
-        _latitudeInput.Increment = 0.000001M;
-        _latitudeInput.Value =
-            (decimal)_config.Weather.Latitude;
-        _latitudeInput.Location = new Point(30, 210);
-        _latitudeInput.Width = 140;
-
+        ConfigureCoordinateInput(
+            _latitudeInput,
+            _config.Weather.Latitude,
+            -90,
+            90,
+            new Point(30, 210));
+            
         var saveButton = new Button
         {
             Text = "Save",
