@@ -107,6 +107,14 @@ public sealed class SettingsForm : Form
             AutoSize = true,
             Location = new Point(200, 180)
         };
+
+        ConfigureCoordinateInput(
+            _longitudeInput,
+            _config.Weather.Longitude
+            -180,
+            180,
+            new Point(200, 210)
+        );
             
         var saveButton = new Button
         {
