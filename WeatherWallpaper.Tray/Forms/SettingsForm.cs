@@ -150,6 +150,16 @@ public sealed class SettingsForm : Form
         UpdateManualLocationState();
     }
 
+    private static void ConfigureCoordinateInput(
+        NumericUpDown input,
+        double value,
+        decimal minimum,
+        decimal maximum,
+        Point location)
+    {
+        
+    }
+
     private void AutomaticLocationInput_CheckedChanged(
         object? sender,
         EventArgs e)
