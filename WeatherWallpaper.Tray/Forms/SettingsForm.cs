@@ -157,6 +157,7 @@ public sealed class SettingsForm : Form
         decimal maximum,
         Point location)
     {
+        input.Minimum = minimum;
         
     }
 
