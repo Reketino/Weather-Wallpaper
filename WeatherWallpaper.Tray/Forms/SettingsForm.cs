@@ -158,6 +158,7 @@ public sealed class SettingsForm : Form
         Point location)
     {
         input.Minimum = minimum;
+        input.Maximum = maximum;
         
     }
 
