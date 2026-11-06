@@ -159,6 +159,7 @@ public sealed class SettingsForm : Form
     {
         input.Minimum = minimum;
         input.Maximum = maximum;
+        input.DecimalPlaces = 6;
         
     }
 
