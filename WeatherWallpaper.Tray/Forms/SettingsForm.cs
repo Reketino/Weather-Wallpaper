@@ -160,7 +160,7 @@ public sealed class SettingsForm : Form
         input.Minimum = minimum;
         input.Maximum = maximum;
         input.DecimalPlaces = 6;
-        
+        input.Increment = 0.000001M;
     }
 
     private void AutomaticLocationInput_CheckedChanged(
