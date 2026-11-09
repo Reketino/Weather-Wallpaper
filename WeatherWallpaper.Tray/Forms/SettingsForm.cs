@@ -165,6 +165,8 @@ public sealed class SettingsForm : Form
             (decimal)value,
             minimum,
             maximum);
+            input.Location = location;
+            
     }
 
     private void AutomaticLocationInput_CheckedChanged(
