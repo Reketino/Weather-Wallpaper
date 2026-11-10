@@ -166,7 +166,7 @@ public sealed class SettingsForm : Form
             minimum,
             maximum);
             input.Location = location;
-            
+            input.Width = 140;
     }
 
     private void AutomaticLocationInput_CheckedChanged(
