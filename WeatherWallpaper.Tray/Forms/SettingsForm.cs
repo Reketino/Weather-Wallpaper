@@ -178,7 +178,7 @@ public sealed class SettingsForm : Form
 
     private void UpdateManualLocationState()
     {
-        var manualLocationEnabled = !_automaticLocationInput.Checked;
+        bool manualLocationEnabled = !_automaticLocationInput.Checked;
 
         _latitudeInput.Enabled = manualLocationEnabled;
         _longitudeInput.Enabled = manualLocationEnabled;
