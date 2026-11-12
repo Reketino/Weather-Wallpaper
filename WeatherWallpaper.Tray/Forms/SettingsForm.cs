@@ -110,7 +110,7 @@ public sealed class SettingsForm : Form
 
         ConfigureCoordinateInput(
             _longitudeInput,
-            _config.Weather.Longitude
+            _config.Weather.Longitude,
             -180,
             180,
             new Point(200, 210)
