@@ -58,8 +58,10 @@ public sealed class SettingsForm : Form
 
         _updateIntervalInput.Minimum = 1;
         _updateIntervalInput.Maximum = 1440;
-        _updateIntervalInput.Value = 
-                _config.Wallpaper.UpdateIntervalMinutes;
+        _updateIntervalInput.Value = Math.Clamp(
+                _config.Wallpaper.UpdateIntervalMinutes,
+                (int)_updateIntervalInput.Minimum,
+                );
         _updateIntervalInput.Location = new Point(30, 60);
         _updateIntervalInput.Width = 100;
         
