@@ -61,7 +61,7 @@ public sealed class SettingsForm : Form
         _updateIntervalInput.Value = Math.Clamp(
                 _config.Wallpaper.UpdateIntervalMinutes,
                 (int)_updateIntervalInput.Minimum,
-                );
+                (int)_updateIntervalInput.Maximum);
         _updateIntervalInput.Location = new Point(30, 60);
         _updateIntervalInput.Width = 100;
         
