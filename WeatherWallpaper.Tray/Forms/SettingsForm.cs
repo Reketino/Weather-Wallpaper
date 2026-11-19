@@ -1,3 +1,5 @@
+using System.Drawing;
+
 using WeatherWallpaper.Core;
 using WeatherWallpaper.Infrastructure;
 
