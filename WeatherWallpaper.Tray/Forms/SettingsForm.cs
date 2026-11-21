@@ -17,10 +17,10 @@ public sealed class SettingsForm : Form
 
     public SettingsForm(
         AppSettings config,
-        Action? onSettingsSaved = null)
+        Func<Task>? onSettingsSaved = null)
     {
         _config = config;
-         _onSettingsSaved = onSettingsSaved;
+        _onSettingsSaved = onSettingsSaved;
          
         _updateIntervalInput = new NumericUpDown();
         _automaticLocationInput = new CheckBox();
