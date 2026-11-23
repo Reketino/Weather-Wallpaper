@@ -189,7 +189,9 @@ public sealed class SettingsForm : Form
         _longitudeInput.Enabled = manualLocationEnabled;
     }
 
-    private void SaveButton_Click(object? sender, EventArgs e)
+    private async void SaveButton_Click(
+        object? sender, 
+        EventArgs e)
     {
         _config.Wallpaper.UpdateIntervalMinutes =
             (int)_updateIntervalInput.Value;
