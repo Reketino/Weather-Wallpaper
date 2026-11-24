@@ -166,12 +166,14 @@ public sealed class SettingsForm : Form
         input.Maximum = maximum;
         input.DecimalPlaces = 6;
         input.Increment = 0.000001M;
+
         input.Value = Math.Clamp(
             (decimal)value,
             minimum,
             maximum);
-            input.Location = location;
-            input.Width = 140;
+
+        input.Location = location;
+        input.Width = 140;
     }
 
     private void AutomaticLocationInput_CheckedChanged(
