@@ -209,8 +209,15 @@ public sealed class SettingsForm : Form
 
         ConfigLoader.Save(_config);
         
-        _onSettingsSaved?.Invoke();
-
+        if (_onSettingsSaved is not null)
+        {
+            await _onSettingsSaved();
+        }
+        
         Close();
+    }
+    catch (Exception ex)
+    {
+        
     }
 }
