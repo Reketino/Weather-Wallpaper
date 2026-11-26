@@ -218,6 +218,8 @@ public sealed class SettingsForm : Form
     }
     catch (Exception ex)
     {
-        
+        Console.WriteLine(
+            $"[Error] {ex.Message}"
+        );
     }
 }
